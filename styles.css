@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #b6b6b6;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: #176B87;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 100vw;
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    color: #D8E9A8;
+}
+
+
+/*button css*/
+.dark-light {
+	width:60px;
+	height:30px;
+	position: absolute;
+    top: 35px;
+    right : 50px;
+	display: block;
+	background: #ebebeb;
+	border-radius: 200px;
+	box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+	transition: 0.3s;
+    cursor: pointer;
+}
+.dark-light:after {
+	content: "";
+	width:30px;
+	height: 30px;
+	position: absolute;
+	background: linear-gradient(180deg,#ffcc89,#d8860b);
+	border-radius: 180px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+#darkmode-toggle {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+#darkmode-toggle:checked + .dark-light {
+	background: #242424;
+}
+#darkmode-toggle:checked + .dark-light:after {
+	left:30px;
+	background: linear-gradient(180deg,#777,#3a3a3a);
+}
+
+/*style buttons*/
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#compare{
+    height: 50px;
+    width: 150px;
+    margin: 10px;
+    background-color: #176B87;
+    color: #EEF5FF;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#compare:hover {
+    background-color: #4a96af;
+    color: #bfc1c4;
+}
+
+.small-buttons{
+    height: 40px;
+    width: 100px;
+    background-color: #3c4444;
+    color:white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.small-buttons,
+.buttons{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.small-buttons:hover,
+.buttons:hover{
+    background-color: #5d6464;
+}
+/*costomise textareas*/
+.text-fields{
+    width: 100vw;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#field1,
+#field2{
+    background-color:#3c4444 ;
+    width: 50vw;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size:15px ;
+}
+
+#field1::placeholder,
+#field2::placeholder{
+    font-size: 15px;
+}
+
+textarea:focus{
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+/*costomising result bar*/
+.difference{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+#difference1{
+    background-color: #3c4444;
+    color: white;
+    height: 30px;
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    }
+
+#match{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 400px;
+    color: white;
+    font-size: 20px;
+    background-color: #3a863a;    ;
+    border: 1px solid white;
+    border-radius: 5px;
+}
